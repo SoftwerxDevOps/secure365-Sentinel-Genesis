@@ -31,11 +31,6 @@
       ],
       "defaultValue": "PerGB2018"
     },
-    "capacityReservation": {
-      "type": "int",
-      "metadata": {
-        "description": "Commitment tier"
-    },
     "enableDataConnectors": {
       "type": "array",
       "metadata": {
