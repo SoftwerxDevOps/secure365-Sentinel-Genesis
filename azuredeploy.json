@@ -83,8 +83,7 @@
             "defaultValue": "https://raw.githubusercontent.com/SoftwerxDevOps/secure365-Sentinel-Genesis/main/"
         }
     },
-    "variables": {
-    },
+    "variables": {},
     "resources": [
         {
             "type": "Microsoft.Resources/resourceGroups",
@@ -209,19 +208,19 @@
                 },
                 "parameters": {
                     "enableSolutions1P": {
-                        "value": "[replace(replace(string(parameters('enableSolutions1P')),'[',''),']','')]"
+                        "value": "[parameters('enableSolutions1P')]"
                     },
                     "enableSolutionsEssentials": {
-                        "value": "[replace(replace(string(parameters('enableSolutionsEssentials')),'[',''),']','')]"
+                        "value": "[parameters('enableSolutionsEssentials')]"
                     },
                     "enableSolutionsTraining": {
-                        "value": "[replace(replace(string(parameters('enableSolutionsTraining')),'[',''),']','')]"
+                        "value": "[parameters('enableSolutionsTraining')]"
                     },
                     "workspaceName": {
                         "value": "[parameters('workspaceName')]"
                     },
                     "severityLevels": {
-                        "value": "[replace(replace(string(parameters('severityLevels')),'[',''),']','')]"
+                        "value": "[parameters('severityLevels')]"
                     },
                     "location": {
                         "value": "[parameters('location')]"
