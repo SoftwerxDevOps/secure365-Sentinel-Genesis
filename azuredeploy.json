@@ -113,7 +113,7 @@
       "metadata": {
         "description": "The location of resources"
       },
-      "defaultValue": "https://raw.githubusercontent.com/alpenshield/Rapid-Sentinel-Deployment/main/"
+      "defaultValue": "https://raw.githubusercontent.com/SoftwerxDevOps/secure365-Sentinel-Genesis/main/"
     }
   },
   "variables": {},
