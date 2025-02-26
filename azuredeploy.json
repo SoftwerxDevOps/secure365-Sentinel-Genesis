@@ -80,10 +80,11 @@
             "metadata": {
                 "description": "The location of resources"
             },
-            "defaultValue": "https://raw.githubusercontent.com/SoftwerxDevOps/secure365-Sentinel-Genesis/main/"
+            "defaultValue": "https://raw.githubusercontent.com/Softwerx-DevOps/Sentinel-Automated-Deployment/main/"
         }
     },
-    "variables": {},
+    "variables": {
+    },
     "resources": [
         {
             "type": "Microsoft.Resources/resourceGroups",
@@ -208,19 +209,19 @@
                 },
                 "parameters": {
                     "enableSolutions1P": {
-                        "value": "[join(parameters('enableSolutions1P'), ',')]"
+                        "value": "[replace(replace(string(parameters('enableSolutions1P')),'[',''),']','')]"
                     },
                     "enableSolutionsEssentials": {
-                        "value": "[join(parameters('enableSolutionsEssentials'), ',')]"
+                        "value": "[replace(replace(string(parameters('enableSolutionsEssentials')),'[',''),']','')]"
                     },
                     "enableSolutionsTraining": {
-                        "value": "[join(parameters('enableSolutionsTraining'), ',')]"
+                        "value": "[replace(replace(string(parameters('enableSolutionsTraining')),'[',''),']','')]"
                     },
                     "workspaceName": {
                         "value": "[parameters('workspaceName')]"
                     },
                     "severityLevels": {
-                        "value": "[join(parameters('severityLevels'), ',')]"
+                        "value": "[replace(replace(string(parameters('severityLevels')),'[',''),']','')]"
                     },
                     "location": {
                         "value": "[parameters('location')]"
@@ -236,7 +237,7 @@
         },
         "dataConnectorsList": {
             "type": "string",
-            "value": "[join(parameters('enableDataConnectors'), ',')]"
+            "value": "[replace(replace(string(parameters('enableDataConnectors')),'\"',''),'[','')]"
         }
     }
 }
