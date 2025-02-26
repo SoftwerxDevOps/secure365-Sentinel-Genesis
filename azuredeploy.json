@@ -35,18 +35,6 @@
       "type": "int",
       "metadata": {
         "description": "Commitment tier"
-      },
-      "allowedValues": [
-        100,
-        200,
-        300,
-        400,
-        500,
-        1000,
-        2000,
-        5000
-      ],
-      "defaultValue": 100
     },
     "enableDataConnectors": {
       "type": "array",
