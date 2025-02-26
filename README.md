@@ -6,4 +6,4 @@ Repository for the Microsoft Sentinel solution.
 
 To deploy this solution, simply click on the Deploy to Azure button below which will take you to the custom deployment page within Azure (make sure you are in the correct tenant where you want the solution to be deployed), simply go through all the required steps you are met with and deploy the solution.
 
-[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FSoftwerx-DevOps%2FSentinel-Automated-Deployment%2Fmain%2Fazuredeploy.json/createUIDefinitionUri/https%3A%2F%2Fraw.githubusercontent.com%2FSoftwerx-DevOps%2FSentinel-Automated-Deployment%2Fmain%2FcreateUiDefinition.json)
+[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FSoftwerxDevOps%2Fsecure365-Sentinel-Genesis%2Fmain%2Fazuredeploy.json/createUIDefinitionUri/https%3A%2F%2Fraw.githubusercontent.com%2FSoftwerxDevOps%2Fsecure365-Sentinel-Genesis%2Fmain%2FcreateUiDefinition.json)
