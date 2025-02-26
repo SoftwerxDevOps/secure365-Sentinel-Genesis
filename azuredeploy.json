@@ -83,8 +83,7 @@
             "defaultValue": "https://raw.githubusercontent.com/SoftwerxDevOps/secure365-Sentinel-Genesis/main/"
         }
     },
-    "variables": {
-    },
+    "variables": {},
     "resources": [
         {
             "type": "Microsoft.Resources/resourceGroups",
