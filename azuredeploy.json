@@ -80,7 +80,7 @@
             "metadata": {
                 "description": "The location of resources"
             },
-            "defaultValue": "https://raw.githubusercontent.com/Softwerx-DevOps/Sentinel-Automated-Deployment/main/"
+            "defaultValue": "https://raw.githubusercontent.com/SoftwerxDevOps/secure365-Sentinel-Genesis/main/"
         }
     },
     "variables": {
