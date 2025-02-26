@@ -15,6 +15,13 @@
             },
             "defaultValue": ""
         },
+        "enableSolutionsEssentials": {
+            "type": "string",
+            "metadata": {
+                "description": "Comma separated essentials enabled solutions"
+            },
+            "defaultValue": ""
+        },
         "enableSolutionsTraining": {
             "type": "string",
             "metadata": {
