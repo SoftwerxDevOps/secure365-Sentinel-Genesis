@@ -83,8 +83,8 @@
             "defaultValue": "https://raw.githubusercontent.com/SoftwerxDevOps/secure365-Sentinel-Genesis/main/"
         }
     },
-    "variables": {
-    },
+    "variables": {},
+    "resources": [
         {
             "type": "Microsoft.Resources/resourceGroups",
             "apiVersion": "2020-06-01",
@@ -208,19 +208,19 @@
                 },
                 "parameters": {
                     "enableSolutions1P": {
-                        "value": "[replace(replace(string(parameters('enableSolutions1P')),'[',''),']','')]"
+                        "value": "[join(parameters('enableSolutions1P'), ',')]"
                     },
                     "enableSolutionsEssentials": {
-                        "value": "[replace(replace(string(parameters('enableSolutionsEssentials')),'[',''),']','')]"
+                        "value": "[join(parameters('enableSolutionsEssentials'), ',')]"
                     },
                     "enableSolutionsTraining": {
-                        "value": "[replace(replace(string(parameters('enableSolutionsTraining')),'[',''),']','')]"
+                        "value": "[join(parameters('enableSolutionsTraining'), ',')]"
                     },
                     "workspaceName": {
                         "value": "[parameters('workspaceName')]"
                     },
                     "severityLevels": {
-                        "value": "[replace(replace(string(parameters('severityLevels')),'[',''),']','')]"
+                        "value": "[join(parameters('severityLevels'), ',')]"
                     },
                     "location": {
                         "value": "[parameters('location')]"
@@ -236,7 +236,7 @@
         },
         "dataConnectorsList": {
             "type": "string",
-            "value": "[replace(replace(string(parameters('enableDataConnectors')),'\"',''),'[','')]"
+            "value": "[join(parameters('enableDataConnectors'), ',')]"
         }
     }
 }
