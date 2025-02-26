@@ -208,7 +208,7 @@
                 },
                 "parameters": {
                     "enableSolutions1P": {
-                        "value": "[parameters('enableSolutions1P')]"
+                        "value": "[replace(replace(string(parameters('enableSolutions1P')),'[',''),']','')]"
                     },
                     "enableSolutionsEssentials": {
                         "value": ""
