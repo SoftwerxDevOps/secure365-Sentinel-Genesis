@@ -220,7 +220,7 @@
                         "value": "[parameters('workspaceName')]"
                     },
                     "severityLevels": {
-                        "value": "[parameters('severityLevels')]"
+                        "value": ""
                     },
                     "enableAlerts": {
                         "value": false
