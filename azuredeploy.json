@@ -222,6 +222,9 @@
                     "severityLevels": {
                         "value": "[parameters('severityLevels')]"
                     },
+                    "enableAlerts": {
+                        "value": false
+                    },
                     "location": {
                         "value": "[parameters('location')]"
                     }
