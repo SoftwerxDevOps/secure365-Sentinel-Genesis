@@ -42,12 +42,6 @@
             "defaultValue": "[resourceGroup().location]"
         }
     },
-    "functions": [],
-    "variables": {
-        "quoatSetting": {
-            "dailyQuotaGb": "[parameters('dailyQuota')]"
-        }
-    },
     "resources": [
         {
             "name": "[parameters('workspaceName')]",
