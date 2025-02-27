@@ -86,10 +86,6 @@
                         {
                             "label": "Pay-as-you-go",
                             "value": "PerGB2018"
-                        },
-                        {
-                            "label": "Commitment Tier",
-                            "value": "CapacityReservation"
                         }
                     ],
                     "required": true
