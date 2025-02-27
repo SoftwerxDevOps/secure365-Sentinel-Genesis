@@ -107,9 +107,6 @@
                     "pricingTier": {
                         "value": "[parameters('pricingTier')]"
                     },
-                    "dailyQuota": {
-                        "value": "[parameters('dailyQuota')]"
-                    },
                     "dataRetention": {
                         "value": "[parameters('dataRetention')]"
                     },
