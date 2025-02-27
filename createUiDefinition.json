@@ -46,20 +46,6 @@
                 "visible": true
             },
             {
-                "name": "dailyQuota",
-                "type": "Microsoft.Common.TextBox",
-                "label": "Daily ingestion limit in GBs. Enter 0 for no limit.",
-                "placeholder": "",
-                "defaultValue": "0",
-                "toolTip": "This limit doesn't apply to the following tables: SecurityAlert, SecurityBaseline, SecurityBaselineSummary, SecurityDetection, SecurityEvent, WindowsFirewall, MaliciousIPCommunication, LinuxAuditLog, SysmonEvent, ProtectionStatus, WindowsEvent. [Learn more](https://learn.microsoft.com/azure/azure-monitor/logs/daily-cap)",
-                "constraints": {
-                    "required": true,
-                    "regex": "^[0-9]{1,4}$",
-                    "validationMessage": "Only numbers allowed, and the value must be 1-4 characters long."
-                },
-                "visible": true
-            },
-            {
                 "name": "dataRetention",
                 "type": "Microsoft.Common.TextBox",
                 "label": "Number of days of retention",
