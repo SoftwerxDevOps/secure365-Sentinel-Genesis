@@ -24,6 +24,25 @@
                 "description": "The kind of data connectors to enable"
             }
         },
+        "ruleGuid": {
+            "type": "string",
+            "defaultValue": "[newGuid()]",
+            "metadata": {
+                "description": "The unique guid for this scheduled alert rule"
+            }
+        },
+        "enableFusionAlert": {
+            "type": "bool",
+            "defaultValue": false
+        },
+        "enableMicrosoftAlerts": {
+            "type": "bool",
+            "defaultValue": false
+        },
+        "enableMLAlerts": {
+            "type": "bool",
+            "defaultValue": false
+        }
     },
     "functions": [],
     "variables": {
