@@ -8,6 +8,46 @@
                 "description": "Name for the Log Analytics workspace"
             }
         },
+        "pricingTier": {
+            "type": "string",
+            "metadata": {
+                "description": "Pricing tier: pergb2018 or legacy tiers (Free, Standalone, PerNode, Standard or Premium) which are not available to all customers."
+            },
+            "allowedValues": [
+                "CapacityReservation",
+                "Free",
+                "LACluster",
+                "PerGB2018",
+                "PerNode",
+                "Premium",
+                "Standalone",
+                "Standard"
+            ],
+            "defaultValue": "PerGB2018"
+        },
+        "capacityReservation": {
+            "type": "int",
+            "metadata": {
+                "description": "Commitment tier"
+            },
+            "allowedValues": [
+                100,
+                200,
+                300,
+                400,
+                500,
+                1000,
+                2000,
+                5000
+            ],
+            "defaultValue": 100
+        },
+        "dailyQuota": {
+            "type": "int",
+            "metadata": {
+                "description": "Daily ingestion limit in GBs. This limit doesn't apply to the following tables: SecurityAlert, SecurityBaseline, SecurityBaselineSummary, SecurityDetection, SecurityEvent, WindowsFirewall, MaliciousIPCommunication, LinuxAuditLog, SysmonEvent, ProtectionStatus, WindowsEvent"
+            }
+        },
         "dataRetention": {
             "type": "int",
             "minValue": 7,
@@ -31,7 +71,13 @@
             },
             "defaultValue": "[resourceGroup().location]"
         }
-   },
+    },
+    "functions": [],
+    "variables": {
+        "quoatSetting": {
+            "dailyQuotaGb": "[parameters('dailyQuota')]"
+        }
+    },
     "resources": [
         {
             "name": "[parameters('workspaceName')]",
@@ -40,8 +86,13 @@
             "location": "[parameters('location')]",
             "properties": {
                 "retentionInDays": "[parameters('dataRetention')]",
+                "workspaceCapping": "[if(equals(parameters('dailyQuota'),0), json('null'), variables('quoatSetting'))]",
                 "features": {
                     "immediatePurgeDataOn30Days": "[parameters('immediatePurgeDataOn30Days')]"
+                },
+                "sku": {
+                    "capacityReservationLevel": "[if(equals(parameters('pricingTier'),'CapacityReservation'), parameters('capacityReservation'), json('null'))]",
+                    "name": "[parameters('pricingTier')]"
                 }
             }
         },
