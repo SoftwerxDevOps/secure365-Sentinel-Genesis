@@ -95,53 +95,6 @@
                     "required": true
                 },
                 "visible": true
-            },
-            {
-                "name": "capacityReservation",
-                "type": "Microsoft.Common.DropDown",
-                "label": "Select Commitment Tier for Sentinel and Log Analytics",
-                "placeholder": "",
-                "multiselect": false,
-                "defaultValue": 100,
-                "toolTip": "Select the Commitment Tier in GB/day",
-                "constraints": {
-                    "allowedValues": [
-                        {
-                            "label": "100 GB",
-                            "value": 100
-                        },
-                        {
-                            "label": "200 GB",
-                            "value": 200
-                        },
-                        {
-                            "label": "300 GB",
-                            "value": 300
-                        },
-                        {
-                            "label": "400 GB",
-                            "value": 400
-                        },
-                        {
-                            "label": "500 GB",
-                            "value": 500
-                        },
-                        {
-                            "label": "1000 GB",
-                            "value": 1000
-                        },
-                        {
-                            "label": "2000 GB",
-                            "value": 2000
-                        },
-                        {
-                            "label": "5000 GB",
-                            "value": 5000
-                        }
-                    ],
-                    "required": true
-                },
-                "visible": "[if(equals(basics('pricingTier'),'CapacityReservation'), true, false)]"
             }
           ],
           "steps": [
