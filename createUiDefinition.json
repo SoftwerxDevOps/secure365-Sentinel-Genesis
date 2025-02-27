@@ -186,9 +186,9 @@
                                     "value": "Microsoft Defender for Cloud"
                                 },
                                 {
-                                    "label": "Microsoft Defender for Endpoint",
-                                    "description": "Microsoft Defender for Endpoint is an enterprise endpoint security platform designed to help enterprise networks prevent, detect, investigate, and respond to advanced threats.",
-                                    "value": "Microsoft Defender for Endpoint"
+                                    "label": "Microsoft 365 Defender XDR",
+                                    "description": "This will only enable incident and alert synchronization, no advanced hunting data will be enabled. Relevant license and Global Admin or Security Admin permission required",
+                                    "value": "Microsoft365Defender"
                                 },
                                 {
                                   "label": "Threat Intelligence",
