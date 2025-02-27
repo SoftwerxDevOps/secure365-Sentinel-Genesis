@@ -34,13 +34,6 @@
             },
             "defaultValue": 90
         },
-        "immediatePurgeDataOn30Days": {
-            "type": "bool",
-            "metadata": {
-                "description": "If set to true when changing retention to 30 days, older data will be immediately deleted. Use this with extreme caution. This only applies when retention is being set to 30 days."
-            },
-            "defaultValue": true
-        },
         "location": {
             "type": "string",
             "metadata": {
