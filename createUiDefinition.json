@@ -216,6 +216,16 @@
                                 "value": "AzureActiveDirectory"
                             },  
                             {
+                                "label": "Microsoft Entra ID",
+                                "description": "Relevant license and Global Admin or Security Admin permission required.",
+                                "value": "AzureActiveDirectory"
+                            },
+                            {
+                                "label": "Microsoft Entra ID Identity Protection",
+                                "description": "Relevant license and Global Admin or Security Admin permission required.",
+                                "value": "AzureActiveDirectoryIDP"
+                            },
+                            {
                                 "label": "Azure Active Directory Identity Protection",
                                 "description": "Relevant license and Global Admin or Security Admin permission required.",
                                 "value": "AzureActiveDirectoryIDP"
