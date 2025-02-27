@@ -279,7 +279,6 @@
         ],
         "outputs": {
             "workspaceName": "[basics('workspaceName')]",
-            "dailyQuota": "[basics('dailyQuota')]",
             "dataRetention": "[basics('dataRetention')]",
             "pricingTier": "[basics('pricingTier')]",
             "enableSolutions1P": "[steps('solutions').enableSolutions1P]",
