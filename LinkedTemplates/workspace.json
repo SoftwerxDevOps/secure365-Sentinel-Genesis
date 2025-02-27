@@ -50,8 +50,6 @@
             "location": "[parameters('location')]",
             "properties": {
                 "retentionInDays": "[parameters('dataRetention')]",
-                "features": {
-                    "immediatePurgeDataOn30Days": "[parameters('immediatePurgeDataOn30Days')]"
                 },
                 "sku": {
                     "name": "[parameters('pricingTier')]"
