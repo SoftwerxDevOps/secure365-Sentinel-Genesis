@@ -296,7 +296,6 @@
             "dailyQuota": "[basics('dailyQuota')]",
             "dataRetention": "[basics('dataRetention')]",
             "pricingTier": "[basics('pricingTier')]",
-            "capacityReservation": "[basics('capacityReservation')]",
             "enableSolutions1P": "[steps('solutions').enableSolutions1P]",
             "enableDataConnectors": "[steps('dataConnectors').enableDataConnectors]",
             "aadStreams": "[steps('dataConnectors').aadStreams]",
