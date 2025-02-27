@@ -49,11 +49,10 @@
             "apiVersion": "2015-11-01-preview",
             "location": "[parameters('location')]",
             "properties": {
-                "retentionInDays": "[parameters('dataRetention')]",
-                },
-                "sku": {
-                    "name": "[parameters('pricingTier')]"
-                }
+                "retentionInDays": "[parameters('dataRetention')]"
+            },
+            "sku": {
+                "name": "[parameters('pricingTier')]"
             }
         },
         {
