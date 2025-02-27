@@ -31,23 +31,6 @@
             ],
             "defaultValue": "PerGB2018"
         },
-        "capacityReservation": {
-            "type": "int",
-            "metadata": {
-                "description": "Commitment tier"
-            },
-            "allowedValues": [
-                100,
-                200,
-                300,
-                400,
-                500,
-                1000,
-                2000,
-                5000
-            ],
-            "defaultValue": 100
-        },
         "enableDataConnectors": {
 
             "type": "array",
@@ -55,12 +38,6 @@
                 "description": "The kind of data connectors that can be deployed via ARM templates are the following: [\"AzureActivityLog\",\"SecurityInsightsSecurityEventCollectionConfiguration\",\"WindowsFirewall\",\"DnsAnalytics\"], Reference: https://docs.microsoft.com/azure/templates/microsoft.operationalinsights/2020-03-01-preview/workspaces/datasources#microsoftoperationalinsightsworkspacesdatasources-object"
             },
             "defaultValue": []
-        },
-        "dailyQuota": {
-            "type": "int",
-            "metadata": {
-                "description": "Daily ingestion limit in GBs. This limit doesn't apply to the following tables: SecurityAlert, SecurityBaseline, SecurityBaselineSummary, SecurityDetection, SecurityEvent, WindowsFirewall, MaliciousIPCommunication, LinuxAuditLog, SysmonEvent, ProtectionStatus, WindowsEvent"
-            }
         },
         "dataRetention": {
             "type": "int",
