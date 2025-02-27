@@ -50,12 +50,10 @@
             "location": "[parameters('location')]",
             "properties": {
                 "retentionInDays": "[parameters('dataRetention')]",
-                "workspaceCapping": "[if(equals(parameters('dailyQuota'),0), json('null'), variables('quoatSetting'))]",
                 "features": {
                     "immediatePurgeDataOn30Days": "[parameters('immediatePurgeDataOn30Days')]"
                 },
                 "sku": {
-                    "capacityReservationLevel": "[if(equals(parameters('pricingTier'),'CapacityReservation'), parameters('capacityReservation'), json('null'))]",
                     "name": "[parameters('pricingTier')]"
                 }
             }
@@ -65,8 +63,7 @@
             "name": "default",
             "scope": "[concat('Microsoft.OperationalInsights/workspaces/', parameters('workspaceName'))]",
             "apiVersion": "2022-12-01-preview",
-            "properties": {
-            },
+            "properties": {},
             "dependsOn": [
                 "[resourceId('Microsoft.OperationalInsights/workspaces', parameters('workspaceName'))]"
             ]
