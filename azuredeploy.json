@@ -14,19 +14,53 @@
                 "description": "Name for the Log Analytics workspace"
             }
         },
+        "pricingTier": {
+            "type": "string",
+            "metadata": {
+                "description": "Pricing tier: pergb2018 or legacy tiers (Free, Standalone, PerNode, Standard or Premium) which are not available to all customers."
+            },
+            "allowedValues": [
+                "CapacityReservation",
+                "Free",
+                "LACluster",
+                "PerGB2018",
+                "PerNode",
+                "Premium",
+                "Standalone",
+                "Standard"
+            ],
+            "defaultValue": "PerGB2018"
+        },
+        "capacityReservation": {
+            "type": "int",
+            "metadata": {
+                "description": "Commitment tier"
+            },
+            "allowedValues": [
+                100,
+                200,
+                300,
+                400,
+                500,
+                1000,
+                2000,
+                5000
+            ],
+            "defaultValue": 100
+        },
         "enableDataConnectors": {
+
             "type": "array",
             "metadata": {
                 "description": "The kind of data connectors that can be deployed via ARM templates are the following: [\"AzureActivityLog\",\"SecurityInsightsSecurityEventCollectionConfiguration\",\"WindowsFirewall\",\"DnsAnalytics\"], Reference: https://docs.microsoft.com/azure/templates/microsoft.operationalinsights/2020-03-01-preview/workspaces/datasources#microsoftoperationalinsightsworkspacesdatasources-object"
             },
             "defaultValue": []
         },
-        "severityLevels": {
-            "type": "array",
+        "dailyQuota": {
+            "type": "int",
             "metadata": {
-                "description": "Severity levels desired for Analytics Rules"
-            },
-            "defaultValue": []
+                "description": "Daily ingestion limit in GBs. This limit doesn't apply to the following tables: SecurityAlert, SecurityBaseline, SecurityBaselineSummary, SecurityDetection, SecurityEvent, WindowsFirewall, MaliciousIPCommunication, LinuxAuditLog, SysmonEvent, ProtectionStatus, WindowsEvent"
+            }
         },
         "dataRetention": {
             "type": "int",
@@ -58,32 +92,16 @@
             },
             "defaultValue": []
         },
-        "enableUeba": {
-            "type": "bool",
-            "metadata": {
-                "description": "Whether or not UEBA should be enabled"
-            },
-            "defaultValue": true
-        },
-        "identityProviders": {
-            "type": "array",
-            "metadata": {
-                "description": "Array of identity providers to be synched with UEBA. Valid identity providers are 'ActiveDirectory' and 'AzureActiveDirectory'"
-            },
-            "defaultValue": []
-        },
-        "enableDiagnostics": {
-            "type": "bool"
-        },
         "_artifactsLocation": {
             "type": "string",
             "metadata": {
                 "description": "The location of resources"
             },
-            "defaultValue": "https://raw.githubusercontent.com/SoftwerxDevOps/secure365-Sentinel-Genesis/main/"
+            "defaultValue": "https://raw.githubusercontent.com/alpenshield/Rapid-Sentinel-Deployment/main/"
         }
     },
-    "variables": {},
+    "variables": {
+    },
     "resources": [
         {
             "type": "Microsoft.Resources/resourceGroups",
@@ -110,44 +128,23 @@
                     "workspaceName": {
                         "value": "[parameters('workspaceName')]"
                     },
+                    "pricingTier": {
+                        "value": "[parameters('pricingTier')]"
+                    },
+                    "dailyQuota": {
+                        "value": "[parameters('dailyQuota')]"
+                    },
                     "dataRetention": {
                         "value": "[parameters('dataRetention')]"
                     },
                     "immediatePurgeDataOn30Days": {
                         "value": "[parameters('immediatePurgeDataOn30Days')]"
                     },
+                    "capacityReservation": {
+                        "value": "[parameters('capacityReservation')]"
+                    },
                     "location": {
                         "value": "[parameters('location')]"
-                    }
-                }
-            }
-        },
-        {
-            "type": "Microsoft.Resources/deployments",
-            "name": "settings",
-            "apiVersion": "2020-06-01",
-            "dependsOn": [
-                "workspaceCreation"
-            ],
-            "resourceGroup": "[parameters('rgName')]",
-            "properties": {
-                "mode": "Incremental",
-                "templateLink": {
-                    "uri": "[uri(parameters('_artifactsLocation'), 'LinkedTemplates/settings.json')]",
-                    "contentVersion": "1.0.0.0"
-                },
-                "parameters": {
-                    "workspaceName": {
-                        "value": "[parameters('workspaceName')]"
-                    },
-                    "enableUeba": {
-                        "value": "[parameters('enableUeba')]"
-                    },
-                    "identityProviders": {
-                        "value": "[parameters('identityProviders')]"
-                    },
-                    "enableDiagnostics": {
-                        "value": "[parameters('enableDiagnostics')]"
                     }
                 }
             }
