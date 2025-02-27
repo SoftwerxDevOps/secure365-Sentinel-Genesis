@@ -20,7 +20,6 @@
                 "description": "Pricing tier: pergb2018 or legacy tiers (Free, Standalone, PerNode, Standard or Premium) which are not available to all customers."
             },
             "allowedValues": [
-                "CapacityReservation",
                 "Free",
                 "LACluster",
                 "PerGB2018",
