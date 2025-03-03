@@ -176,11 +176,6 @@
                                     "value": "Azure Activity"
                                 },
                                 {
-                                    "label": "Microsoft 365",
-                                    "description": "The Microsoft 365 solution for Microsoft Sentinel enables you to ingest operational logs from Microsoft 365 to gain insights into user and admin activity across your collaboration platforms such as Teams, SharePoint and Exchange.",
-                                    "value": "Microsoft 365"
-                                },
-                                {
                                     "label": "Microsoft Defender for Cloud",
                                     "description": "The Microsoft Defender for Cloud solution for Microsoft Sentinel allows you to ingest Security alerts reported in Microsoft Defender for Cloud on assessing your hybrid cloud workload's security posture.",
                                     "value": "Microsoft Defender for Cloud"
@@ -253,11 +248,6 @@
                                 "label": "Microsoft Defender for Cloud",
                                 "description": "Security Reader permission required",
                                 "value": "MicrosoftDefenderForCloud"
-                            },
-                            {
-                                "label": "Office 365",
-                                "description": "Relevant license and Global Admin or Security Admin permission required",
-                                "value": "Office365"
                             },
                             {
                                 "label": "Threat Intelligence",
