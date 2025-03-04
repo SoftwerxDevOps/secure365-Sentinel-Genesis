@@ -113,8 +113,8 @@
                       "constraints": {
                           "allowedValues": [
                               {
-                                  "label": "Azure Active Directory",
-                                  "value": "AzureActiveDirectory"
+                                  "label": "Microsoft Enatra ID",
+                                  "value": "Microsoft Entra ID"
                               },
                               {
                                   "label": "Active Directory (requires Microsoft Defender for Identity)",
