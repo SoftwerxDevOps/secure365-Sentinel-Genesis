@@ -127,6 +127,36 @@
             }
         },
         {
+            "type": "Microsoft.Resources/deployments",
+            "name": "settings",
+            "apiVersion": "2020-06-01",
+            "dependsOn": [
+                "workspaceCreation"
+            ],
+            "resourceGroup": "[parameters('rgName')]",
+            "properties": {
+                "mode": "Incremental",
+                "templateLink": {
+                    "uri": "[uri(parameters('_artifactsLocation'), 'LinkedTemplates/settings.json')]",
+                    "contentVersion": "1.0.0.0"
+                },
+                "parameters": {
+                    "workspaceName": {
+                        "value": "[parameters('workspaceName')]"
+                    },
+                    "enableUeba": {
+                        "value": "[parameters('enableUeba')]"
+                    },
+                    "identityProviders": {
+                        "value": "[parameters('identityProviders')]"
+                    },
+                    "enableDiagnostics": {
+                        "value": "[parameters('enableDiagnostics')]"
+                    }
+                }
+            }
+        },
+        {
             "condition": "[not(empty(parameters('enableDataConnectors')))]",
             "name": "enableDataConnectors",
             "type": "Microsoft.Resources/deployments",
