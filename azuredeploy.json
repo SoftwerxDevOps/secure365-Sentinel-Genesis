@@ -54,6 +54,13 @@
             },
             "defaultValue": []
         },
+        "enableSolutionsEssentials": {
+            "type": "array",
+            "metadata": {
+                "description": "The list of Content Hub Essentials solutions to deploy."
+            },
+            "defaultValue": []
+        },
         "aadStreams": {
             "type": "array",
             "metadata": {
