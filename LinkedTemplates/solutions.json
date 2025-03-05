@@ -110,7 +110,7 @@
             }
         },
         {
-            "condition": "[contains(parameters('enableSolutions1P'), 'UEBAEssentials')]",
+            "condition": "[contains(parameters('enableSolutionsEssentials'), 'UEBAEssentials')]",
             "name": "UEBAEssentials",
             "type": "Microsoft.Resources/deployments",
             "apiVersion": "2021-04-01",
