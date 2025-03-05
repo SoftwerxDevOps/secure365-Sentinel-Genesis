@@ -136,7 +136,13 @@
             "name": "[concat(parameters('workspaceName'), '/', replace(parameters('subscriptionId'),'-', ''))]",
             "kind": "AzureActivityLog",
             "properties": {
+                "subscriptionId": "[parameters('subscriptionId')]",
                 "linkedResourceId": "[concat('/subscriptions/', parameters('subscriptionId'), '/providers/microsoft.insights/eventtypes/management')]"
+                "dataTypes": {
+                    "alerts": {
+                        "state": "enabled"
+                    }
+                }
             }
         },
         {
