@@ -215,7 +215,7 @@
                         "value": "[replace(replace(string(parameters('enableSolutions1P')),'[',''),']','')]"
                     },
                     "enableSolutionsEssentials": {
-                        "value": ""
+                        "value": "[replace(replace(string(parameters('enableSolutionsEssentials')),'[',''),']','')]"
                     },
                     "enableSolutionsTraining": {
                         "value": ""
