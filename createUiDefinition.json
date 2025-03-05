@@ -209,10 +209,73 @@
                             "required": false
                         },
                         "visible": true
+                    },
+                    {
+                    "name": "enableSolutionsEssentials",
+                      "type": "Microsoft.Common.DropDown",
+                      "label": "Select Essentials Content Hub solutions to install",
+                      "placeholder": "",
+                      "multiselect": true,
+                      "filter": true,
+                      "filterPlaceholder": "Filter items ...",
+                      "multiLine": true,
+                      "defaultDescription": "A value for selection",
+                      "toolTip": "Select essentials solutions that you would like to install",
+                      "constraints": {
+                          "allowedValues": [
+                            {
+                                "label": "Attacker Tools Threat Protection Essentials",
+                                "description": "The Attacker Tools Threat Protection Essentials solution contains security content that is relevant for detection of tools commonly used by attackers in various campaigns",
+                                "value": "Attacker Tools Threat Protection Essentials"
+                            },
+                            {
+                                "label": "Cloud Identity Threat Protection Essentials",
+                                "description": "The Cloud Identity Threat Protection Essentials solution looks for most common cloud focused identity attacks such as Suspicious Sign-ins, privilege grants, MFA disable etc.",
+                                "value": "Cloud Identity Threat Protection Essentials"
+                            },
+                            {
+                                "label": "Cloud Service Threat Protection Essentials",
+                                "description": "The Cloud Service Threat Protection Essentials contains security content that is relevant for detection of attacks against various cloud services like key vault, storage, compute etc.",
+                                "value": "Cloud Service Threat Protection Essentials"
+                            },
+                            {
+                                "label": "Endpoint Threat Protection Essentials",
+                                "description": "The Endpoint Threat Protection Essentials solution provides content to monitor, detect and investigate threats related to windows machines.",
+                                "value": "Endpoint Threat Protection Essentials"
+                            },
+                            {
+                                "label": "Network Session Essentials",
+                                "description": "The Network Session Essentials solution leverages the Advanced Security Information Model (ASIM) to correlate insights across 15+ networking data sources and deliver more value for SOC use cases with less content.",
+                                "value": "Network Session Essentials"
+                            }, 
+                            {
+                                "label": "Network Threat Protection Essentials",
+                                "description": "The Network Threat Protection Essentials solution contains queries that identifies suspicious network behavior based on various data sources ingested in Sentinel.",
+                                "value": "Network Threat Protection Essentials"
+                            },
+                            {
+                                "label": "SOC Handbook",
+                                "description": "The SOC Handbook solution for Microsoft Sentinel provides a collection of resources that enable and empower SOC Analysts to get better visibility and understanding of point-in-time security posture of organizational resources.",
+                                "value": "SOC Handbook"
+                            },
+                            {
+                                "label": "SOC Process Framework",
+                                "description": "The SOC Process Framework Solution is built in order to easily integrate with Microsoft Sentinel and build a standard SOC Process and Procedure Framework within your Organization.",
+                                "value": "SOC Process Framework"
+                            },
+                            {
+                                "label": "UEBA Essentials",
+                                "description": "The Sentinel UEBA content package will provide you with various queries based on UEBA tables, that allows you to hunt for tailored threat scenarios.",
+                                "value": "UEBA Essentials"
+                            }
+                          ],
+                          "required": false
+                      },
+                      "visible": true
                     }
                 ]
             },
-          {
+            {
               "name": "dataConnectors",
               "label": "Data connectors",
               "elements": [
