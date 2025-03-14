@@ -259,11 +259,6 @@
                                 "value": "SOC Handbook"
                             },
                             {
-                                "label": "SOC Process Framework",
-                                "description": "The SOC Process Framework Solution is built in order to easily integrate with Microsoft Sentinel and build a standard SOC Process and Procedure Framework within your Organization.",
-                                "value": "SOC Process Framework"
-                            },
-                            {
                                 "label": "UEBA Essentials",
                                 "description": "The Sentinel UEBA content package will provide you with various queries based on UEBA tables, that allows you to hunt for tailored threat scenarios.",
                                 "value": "UEBA Essentials"
