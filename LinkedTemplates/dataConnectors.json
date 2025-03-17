@@ -45,6 +45,7 @@
     },
     "variables": {
         "m365dName": "[concat('m365d', uniqueString(resourceGroup().id))]",
+        "o365Name": "[concat('o365', uniqueString(resourceGroup().id))]",
         "d365Name": "[concat('d365', uniqueString(resourceGroup().id))]",
         "irmName": "[concat('irm', uniqueString(resourceGroup().id))]",
         "ascName": "[concat('asc', uniqueString(resourceGroup().id))]",
@@ -141,6 +142,28 @@
                 "linkedResourceId": "[concat('/subscriptions/', parameters('subscriptionId'), '/providers/microsoft.insights/eventtypes/management')]",
                 "dataTypes": {
                     "alerts": {
+                        "state": "enabled"
+                    }
+                }
+            }
+        },
+        {
+            "condition": "[contains(parameters('dataConnectorsKind'), 'Office365')]",
+            "type": "Microsoft.OperationalInsights/workspaces/providers/dataConnectors",
+            "apiVersion": "2020-01-01",
+            "location": "[parameters('location')]",
+            "name": "[concat(parameters('workspaceName'),'/Microsoft.SecurityInsights/',variables('o365Name'))]",
+            "kind": "Office365",
+            "properties": {
+                "tenantId": "[parameters('tenantId')]",
+                "dataTypes": {
+                    "exchange": {
+                        "state": "enabled"
+                    },
+                    "sharePoint": {
+                        "state": "enabled"
+                    },
+                    "teams": {
                         "state": "enabled"
                     }
                 }
