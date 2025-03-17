@@ -48,6 +48,7 @@
         "d365Name": "[concat('d365', uniqueString(resourceGroup().id))]",
         "irmName": "[concat('irm', uniqueString(resourceGroup().id))]",
         "ascName": "[concat('asc', uniqueString(resourceGroup().id))]",
+        "mcasName": "[concat('mcas', uniqueString(resourceGroup().id))]",
         "aadipName": "[concat('aadip', uniqueString(resourceGroup().id))]",
         "tiName": "[concat('ti', uniqueString(resourceGroup().id))]"
     },
@@ -147,6 +148,22 @@
         },
         {
             "condition": "[contains(parameters('dataConnectorsKind'), 'MicrosoftDefenderForCloud')]",
+            "type": "Microsoft.OperationalInsights/workspaces/providers/dataConnectors",
+            "apiVersion": "2020-01-01",
+            "location": "[parameters('location')]",
+            "name": "[concat(parameters('workspaceName'),'/Microsoft.SecurityInsights/',variables('ascName'))]",
+            "kind": "AzureSecurityCenter",
+            "properties": {
+                "subscriptionId": "[parameters('subscriptionId')]",
+                "dataTypes": {
+                    "alerts": {
+                        "state": "enabled"
+                    }
+                }
+            }
+        },
+        {
+            "condition": "[contains(parameters('dataConnectorsKind'), 'MicrosoftDefenderForCloudApps')]",
             "type": "Microsoft.OperationalInsights/workspaces/providers/dataConnectors",
             "apiVersion": "2020-01-01",
             "location": "[parameters('location')]",
