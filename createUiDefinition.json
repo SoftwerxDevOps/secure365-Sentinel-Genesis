@@ -196,6 +196,11 @@
                                     "value": "Microsoft Defender for Cloud Apps"
                                 },
                                 {
+                                  "label": "Microsoft 365",
+                                  "description": "The Microsoft 365 solution for Microsoft Sentinel enables you to ingest operational logs from Microsoft 365 to gain insights into user and admin activity across your collaboration platforms such as Teams, SharePoint and Exchange.",
+                                  "value": "Microsoft 365"
+                                },
+                                {
                                     "label": "UEBA Essentials",
                                     "description": "The Sentinel UEBA content package will provide you with various queries based on UEBA tables, that allows you to hunt for tailored threat scenarios.",
                                     "value": "UEBA Essentials"
