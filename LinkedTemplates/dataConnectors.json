@@ -212,7 +212,7 @@
                 "tenantId": "[parameters('tenantId')]",
                 "dataTypes": {
                     "incidents": {
-                        "state": ""
+                        "state": "enabled"
                     }
                 }
             }
