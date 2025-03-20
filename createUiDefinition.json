@@ -216,6 +216,11 @@
                                     "value": "Azure Storage"
                                 },
                                 {
+                                    "label": "Azure SQL Database",
+                                    "description": "The Azure SQL Database Solution for Microsoft Sentinel enables you to stream Azure SQL database audit and diagnostic logs into Microsoft Sentinel.",
+                                    "value": "Azure SQL Database"
+                                },
+                                {
                                     "label": "UEBA Essentials",
                                     "description": "The Sentinel UEBA content package will provide you with various queries based on UEBA tables, that allows you to hunt for tailored threat scenarios.",
                                     "value": "UEBA Essentials"
@@ -366,6 +371,11 @@
                                 "label": "Azure Storage",
                                 "description": "The Azure Storage account Solution for Microsoft Sentinel enables you to stream Azure Storage accounts diagnostics logs into your Microsoft Sentinel workspace.",
                                 "value": "Azure Storage"
+                            },
+                            {
+                                "label": "Azure SQL Database",
+                                "description": "The Azure SQL Database Solution for Microsoft Sentinel enables you to stream Azure SQL database audit and diagnostic logs into Microsoft Sentinel.",
+                                "value": "Azure SQL Database"
                             },
                             {
                                 "label": "UEBA Essentials",
