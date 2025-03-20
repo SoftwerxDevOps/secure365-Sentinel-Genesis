@@ -343,6 +343,11 @@
                                 "value": "Azure Key Vault"
                             },
                             {
+                                "label": "Azure Network Security Groups",
+                                "description": "The Azure Network Security Group solution enables you to stream and ingest diagnostic logs from your Azure NSG instances for Security Monitoring in to Microsoft Sentinel using Resource Diagnostic settings.",
+                                "value": "Azure Key Vault"
+                            },
+                            {
                                 "label": "UEBA Essentials",
                                 "description": "The Sentinel UEBA content package will provide you with various queries based on UEBA tables, that allows you to hunt for tailored threat scenarios.",
                                 "value": "UEBA Essentials"
