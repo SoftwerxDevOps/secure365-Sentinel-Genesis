@@ -333,6 +333,11 @@
                                 "value": "Microsoft Defender for Cloud Apps"
                             },
                             {
+                                "label": "Office 365",
+                                "description": "Relevant license and Global Admin or Security Admin permission required",
+                                "value": "Office365"
+                            },
+                            {
                                 "label": "UEBA Essentials",
                                 "description": "The Sentinel UEBA content package will provide you with various queries based on UEBA tables, that allows you to hunt for tailored threat scenarios.",
                                 "value": "UEBA Essentials"
