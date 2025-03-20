@@ -196,9 +196,19 @@
                                     "value": "Microsoft Defender for Cloud Apps"
                                 },
                                 {
-                                  "label": "Microsoft 365",
-                                  "description": "The Microsoft 365 solution for Microsoft Sentinel enables you to ingest operational logs from Microsoft 365 to gain insights into user and admin activity across your collaboration platforms such as Teams, SharePoint and Exchange.",
-                                  "value": "Microsoft 365"
+                                    "label": "Office 365",
+                                    "description": "Relevant license and Global Admin or Security Admin permission required",
+                                    "value": "Office365"
+                                },
+                                {
+                                    "label": "Azure Key Vault",
+                                    "description": "Azure Key Vault Solution for Microsoft Sentinel enables you to stream Azure Key Vault diagnostics logs into Microsoft Sentinel, allowing you to continuously monitor activity in all your instances.",
+                                    "value": "Azure Key Vault"
+                                },
+                                {
+                                    "label": "Azure Network Security Groups",
+                                    "description": "The Azure Network Security Group solution enables you to stream and ingest diagnostic logs from your Azure NSG instances for Security Monitoring in to Microsoft Sentinel using Resource Diagnostic settings.",
+                                    "value": "Azure Key Vault"
                                 },
                                 {
                                     "label": "UEBA Essentials",
@@ -206,9 +216,9 @@
                                     "value": "UEBA Essentials"
                                 },
                                 {
-                                  "label": "Threat Intelligence",
-                                  "description": "Ingest threat indicators into Microsoft Sentinel. Threat indicators can be IP addresses, domains, URLs and file hashes and can be used to correlate across log sources for known indicators of compromise and/or indicators of active attack",
-                                  "value": "Threat Intelligence"
+                                    "label": "Threat Intelligence",
+                                    "description": "Ingest threat indicators into Microsoft Sentinel. Threat indicators can be IP addresses, domains, URLs and file hashes and can be used to correlate across log sources for known indicators of compromise and/or indicators of active attack",
+                                    "value": "Threat Intelligence"
                               }
                             ],
                             "required": false
