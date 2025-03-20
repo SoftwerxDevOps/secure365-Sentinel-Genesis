@@ -338,6 +338,11 @@
                                 "value": "Office365"
                             },
                             {
+                                "label": "Azure Key Vault",
+                                "description": "Azure Key Vault Solution for Microsoft Sentinel enables you to stream Azure Key Vault diagnostics logs into Microsoft Sentinel, allowing you to continuously monitor activity in all your instances.",
+                                "value": "Azure Key Vault"
+                            },
+                            {
                                 "label": "UEBA Essentials",
                                 "description": "The Sentinel UEBA content package will provide you with various queries based on UEBA tables, that allows you to hunt for tailored threat scenarios.",
                                 "value": "UEBA Essentials"
