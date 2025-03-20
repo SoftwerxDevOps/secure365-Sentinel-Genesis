@@ -208,7 +208,12 @@
                                 {
                                     "label": "Azure Network Security Groups",
                                     "description": "The Azure Network Security Group solution enables you to stream and ingest diagnostic logs from your Azure NSG instances for Security Monitoring in to Microsoft Sentinel using Resource Diagnostic settings.",
-                                    "value": "Azure Key Vault"
+                                    "value": "Azure Network Security Groups"
+                                },
+                                {
+                                    "label": "Azure Storage",
+                                    "description": "The Azure Storage account Solution for Microsoft Sentinel enables you to stream Azure Storage accounts diagnostics logs into your Microsoft Sentinel workspace.",
+                                    "value": "Azure Storage"
                                 },
                                 {
                                     "label": "UEBA Essentials",
@@ -356,6 +361,11 @@
                                 "label": "Azure Network Security Groups",
                                 "description": "The Azure Network Security Group solution enables you to stream and ingest diagnostic logs from your Azure NSG instances for Security Monitoring in to Microsoft Sentinel using Resource Diagnostic settings.",
                                 "value": "Azure Key Vault"
+                            },
+                            {
+                                "label": "Azure Storage",
+                                "description": "The Azure Storage account Solution for Microsoft Sentinel enables you to stream Azure Storage accounts diagnostics logs into your Microsoft Sentinel workspace.",
+                                "value": "Azure Storage"
                             },
                             {
                                 "label": "UEBA Essentials",
