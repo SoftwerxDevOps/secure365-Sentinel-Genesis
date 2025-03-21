@@ -186,7 +186,7 @@
             }
         },
         {
-            "condition": "[contains(parameters('dataConnectorsKind'), 'MicrosoftDefenderForCloudApps')]",
+            "condition": "[contains(parameters('dataConnectorsKind'), 'Microsoft Defender For CloudApps')]",
             "type": "Microsoft.OperationalInsights/workspaces/providers/dataConnectors",
             "apiVersion": "2020-01-01",
             "location": "[parameters('location')]",
@@ -212,6 +212,22 @@
                 "tenantId": "[parameters('tenantId')]",
                 "dataTypes": {
                     "incidents": {
+                        "state": "enabled"
+                    }
+                }
+            }
+        },
+        {
+            "condition": "[contains(parameters('dataConnectorsKind'), 'Microsoft Defender Threat Intelligence')]",
+            "type": "Microsoft.OperationalInsights/workspaces/providers/dataConnectors",
+            "apiVersion": "2020-01-01",
+            "location": "[parameters('location')]",
+            "name": "[concat(parameters('workspaceName'),'/Microsoft.SecurityInsights/',variables('tiName'))]",
+            "kind": "ThreatIntelligence",
+            "properties": {
+                "tenantId": "[parameters('tenantId')]",
+                "dataTypes": {
+                    "indicators": {
                         "state": "enabled"
                     }
                 }
