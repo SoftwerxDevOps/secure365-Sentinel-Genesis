@@ -186,7 +186,7 @@
             }
         },
         {
-            "condition": "[contains(parameters('dataConnectorsKind'), 'Microsoft Defender For CloudApps')]",
+            "condition": "[contains(parameters('dataConnectorsKind'), 'Microsoft Defender For Cloud Apps')]",
             "type": "Microsoft.OperationalInsights/workspaces/providers/dataConnectors",
             "apiVersion": "2020-01-01",
             "location": "[parameters('location')]",
