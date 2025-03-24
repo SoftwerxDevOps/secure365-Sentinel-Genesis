@@ -218,7 +218,7 @@
             }
         },
         {
-            "condition": "[contains(parameters('dataConnectorsKind'), 'Microsoft Defender Threat Intelligence')]",
+            "condition": "[contains(parameters('dataConnectorsKind'), 'MicrosoftDefenderThreatIntelligence')]",
             "type": "Microsoft.OperationalInsights/workspaces/providers/dataConnectors",
             "apiVersion": "2020-01-01",
             "location": "[parameters('location')]",
