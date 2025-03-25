@@ -229,7 +229,6 @@
                                     "label": "UEBA Essentials",
                                     "description": "The Sentinel UEBA content package will provide you with various queries based on UEBA tables, that allows you to hunt for tailored threat scenarios.",
                                     "value": "UEBA Essentials"
-                                },
                               }
                             ],
                             "required": false
@@ -387,7 +386,6 @@
                                 "label": "UEBA Essentials",
                                 "description": "The Sentinel UEBA content package will provide you with various queries based on UEBA tables, that allows you to hunt for tailored threat scenarios.",
                                 "value": "UEBA Essentials"
-                            },
                             }
                           ],
                           "required": false
