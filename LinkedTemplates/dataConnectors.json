@@ -230,7 +230,6 @@
                  "dataTypes": {
                      "indicators": {
                          "state": "enabled"
-
                     }
                 }
             }
