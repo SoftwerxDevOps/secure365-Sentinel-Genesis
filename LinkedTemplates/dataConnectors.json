@@ -52,7 +52,7 @@
         "mcasName": "[concat('mcas', uniqueString(resourceGroup().id))]",
         "aadipName": "[concat('aadip', uniqueString(resourceGroup().id))]",
         "tiName": "[concat('ti', uniqueString(resourceGroup().id))]",
-        "defendertiName": "[concat('ti', uniqueString(resourceGroup().id))]"
+        
     },
     "resources": [
          {
@@ -230,22 +230,7 @@
                  "dataTypes": {
                      "indicators": {
                          "state": "enabled"
-                    }
-                }
-            }
-        },
-        {
-            "condition": "[contains(parameters('dataConnectorsKind'), 'MicrosoftDefenderThreatIntelligence')]",
-            "type": "Microsoft.OperationalInsights/workspaces/providers/dataConnectors",
-            "apiVersion": "2020-01-01",
-            "location": "[parameters('location')]",
-            "name": "[concat(parameters('workspaceName'),'/Microsoft.SecurityInsights/',variables('defendertiName'))]",
-            "kind": "ThreatIntelligence",
-            "properties": {
-                "tenantId": "[parameters('tenantId')]",
-                "dataTypes": {
-                    "indicators": {
-                        "state": "enabled"
+
                     }
                 }
             }
