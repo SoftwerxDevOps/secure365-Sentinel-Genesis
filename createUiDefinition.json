@@ -230,10 +230,6 @@
                                     "description": "The Sentinel UEBA content package will provide you with various queries based on UEBA tables, that allows you to hunt for tailored threat scenarios.",
                                     "value": "UEBA Essentials"
                                 },
-                                {
-                                    "label": "Threat Intelligence",
-                                    "description": "Ingest threat indicators into Microsoft Sentinel. Threat indicators can be IP addresses, domains, URLs and file hashes and can be used to correlate across log sources for known indicators of compromise and/or indicators of active attack",
-                                    "value": "Threat Intelligence"
                               }
                             ],
                             "required": false
@@ -392,10 +388,6 @@
                                 "description": "The Sentinel UEBA content package will provide you with various queries based on UEBA tables, that allows you to hunt for tailored threat scenarios.",
                                 "value": "UEBA Essentials"
                             },
-                            {
-                                "label": "Threat Intelligence",
-                                "description": "Ingest threat indicators into Microsoft Sentinel. Threat indicators can be IP addresses, domains, URLs and file hashes and can be used to correlate across log sources for known indicators of compromise and/or indicators of active attack",
-                                "value": "Threat Intelligence"
                             }
                           ],
                           "required": false
